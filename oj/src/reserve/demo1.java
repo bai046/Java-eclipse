@@ -12,7 +12,7 @@ public class demo1 {
 		sc.close();
 		
 		Random ra=new Random();
-		System.out.print("hello,"+t+",1your lucky number is:");int h=ra.nextInt(10)+1;
+		System.out.print("hello,"+t+",your lucky number is:");int h=ra.nextInt(10)+1;
 		System.out.println(h);
 	}
 
