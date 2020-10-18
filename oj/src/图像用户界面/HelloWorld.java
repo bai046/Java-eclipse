@@ -35,6 +35,5 @@ class MainWind extends JFrame{
 		g.fillRect(10, 50, 10, 10);
 		g.setColor(Color.RED);
 		g.drawRect(10, 50, 10, 10);
-		
 	}
 }
