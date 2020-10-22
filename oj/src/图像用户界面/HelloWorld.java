@@ -12,6 +12,7 @@ public class HelloWorld {
 		// TODO Auto-generated method stub
 		MainWind w=new MainWind();
 		w.repaint();
+		  
 	}
 
 }
@@ -25,15 +26,15 @@ class MainWind extends JFrame{
 	}
 	public void paint(Graphics g) {
 		super.paint(g);
-		
 		Font ef=new Font("TimeRoman",Font.PLAIN,16);
-		g.setFont(ef);
-		g.drawString("你好，世界", 8, 50);
+		g.setFont(ef);//英文
+		g.drawString("Hello World!", 20, 80);
 		Font cf=new Font("楷体",Font.PLAIN,24);
-		g.setFont(cf);
+		g.setFont(cf);//楷体
+		g.drawString("你好，世界", 20, 120);
 		g.setColor(Color.black);
-		g.fillRect(10, 50, 10, 10);
+		g.fillRect(20, 150, 100, 100);
 		g.setColor(Color.RED);
-		g.drawRect(10, 50, 10, 10);
+		g.drawRect(20, 150, 100, 100);
 	}
 }

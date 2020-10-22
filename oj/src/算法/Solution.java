@@ -1,5 +1,7 @@
 package 算法;
 
+import java.util.Arrays;
+
 /**
  * 请在此注释你的 姓名，班级，专业
  * 例如： 郭淑瑛  B190109 软件工程
@@ -44,6 +46,20 @@ public class Solution {
     public static String reverseLeftWords(String s, int n) {
         //请在此补充代码
         //请删除下面一行代码
+    	 if (s == null || n < 0 || n > s.length()) return "";
+         char[] chars = s.toCharArray();
+         int length = chars.length;
+         String reverse = "";
+         for(int i =n;i<length;i++){
+             reverse += chars[i];
+         }
+         String reverse2 = "";
+         for(int k=0;k<n;k++){
+             reverse2 +=chars[k];
+         }
+        String reverse3 = reverse + reverse2;
+        return reverse3;
+     }
     // C语言
     	//char* reverseLeftWords(char* s, int n){
 //  	int i = 0;
@@ -73,8 +89,7 @@ public class Solution {
 //  	printf("%s\n", s);
 //  	return 0;
 //  }
-    	return s;
-    }
+    	
 
     /**
      * 第三题：存在重复3次的元素
@@ -82,7 +97,21 @@ public class Solution {
     public static boolean containsDuplicate(int[] nums) {
         //请在此补充代码
         //请删除下面一行代码
-        return false;
+    	  Arrays.sort(nums);
+          int len = nums.length;
+          for(int i=0;i<len-1;i++){
+              for(int j=i+1;j<len;j++){
+                  if(nums[i]==nums[j]) {
+                  for(int k=j+1;k<len+1;k++) {
+                	  if(nums[j]==nums[k])return true;
+                	  else return false;
+                  }
+                  }
+                  else return false;
+          }
+		return false;
+              }
+		return false;
     }
 
     /**
@@ -91,9 +120,12 @@ public class Solution {
     public static char[] reverseString(char[] s) {
         //请在此补充代码
         //请删除下面一行代码
-    	 int begin =0;
-         int end =s.length-1;
-         while(begin<end){
+    	
+    	//双指针
+        int begin =0;
+        int end =s.length-1;
+        while(begin<end){
+           //首位和末尾交换位置
             char temp = s[begin];
             s[begin] = s[end];
             s[end] = temp;
