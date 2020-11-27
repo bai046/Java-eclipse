@@ -46,7 +46,7 @@ public class Student {
 		this.nativeplace = nativeplace;
 	}
 	
-	
+	//重载返回输出格式内容，不写输出地址
 	public String toString() {
 		return "Student [id=" + id + ", name=" + name + "]";
 	}
