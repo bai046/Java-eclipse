@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author חר
- *
- */
-module Mysqljdbc {
-}
