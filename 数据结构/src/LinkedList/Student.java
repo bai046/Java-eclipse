@@ -6,6 +6,7 @@ public class Student {
 	private char gender;
 	private int age;
 	private String nativeplace;
+	private Object Student;
 	
 	public Student() {
 		
