@@ -1,6 +1,7 @@
 package 算法;
 
 import java.util.Arrays;
+import java.util.*;
 
 /**
  * 请在此注释你的 姓名，班级，专业
@@ -19,7 +20,7 @@ public class Solution {
         //test3();
 
         //测试第四题
-        //test4();
+        test4();
     }
 
     /**
@@ -49,14 +50,17 @@ public class Solution {
     	 if (s == null || n < 0 || n > s.length()) return "";
          char[] chars = s.toCharArray();
          int length = chars.length;
+         
          String reverse = "";
          for(int i =n;i<length;i++){
              reverse += chars[i];
          }
+         
          String reverse2 = "";
          for(int k=0;k<n;k++){
              reverse2 +=chars[k];
          }
+         
         String reverse3 = reverse + reverse2;
         return reverse3;
      }
@@ -134,7 +138,8 @@ public class Solution {
          }
          return s;
     }
-
+    
+//    https://www.nowcoder.com/practice/c3a6afee325e472386a1c4eb1ef987f3?tpId=188&&tqId=36565&rp=1&ru=/ta/job-code-high-week&qru=/ta/job-code-high-week/question-ranking
 
 
 
@@ -175,7 +180,7 @@ public class Solution {
         printElements(reverseResult);
     }
 
-    public static void printElements(char[] charArray) {
+	public static void printElements(char[] charArray) {
         System.out.print("[");
         for (int i = 0; i < charArray.length; i++) {
             if (i == charArray.length - 1) {
