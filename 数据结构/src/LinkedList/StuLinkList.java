@@ -26,7 +26,7 @@ public void insertAfter(StuNode p,StuNode s) {//后插入
 	p.setNext(s);
 }
 
-public void insert(StuNode p,StuNode s) {//前插入
+public void insertbefor(StuNode p,StuNode s) {//前插入
 	if(head==null)return;
 	StuNode q=head;
 	while(q.getNext()!=null) {
@@ -36,6 +36,19 @@ public void insert(StuNode p,StuNode s) {//前插入
 			break;
 		}
 		q=q.getNext();
+	}
+	
+}
+
+public void delete(StuNode p) {//单链表删除操作
+	if(head==null)return;
+	StuNode s1=head;
+	while(s1.getNext()!=null) {
+		if(s1.getNext()==p) {
+			s1.setNext(p.getNext());
+			break;
+		}
+		s1=s1.getNext();
 	}
 }
 
