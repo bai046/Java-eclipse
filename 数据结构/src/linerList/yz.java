@@ -8,10 +8,11 @@ public class yz {
 		StuSeqList sl=new StuSeqList(14,10);
 		
 		Student stu1 =new Student(1,"ÕÅÈı");
+		Student stu2 =new Student(2,"ÕÅer");
 		
 		System.out.print(sl.insert(8, stu1));
-		//System.out.print(sl.insert(10, stu1));
-		//System.out.print(sl.insert(10, stu1));
+		System.out.print(sl.insert(10, stu2));
+		System.out.print(sl.insert(10, stu1));
 		//System.out.print(sl.insert(10, stu1));
 		//System.out.print(sl.insert(10, stu1));
 		
