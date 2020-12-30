@@ -1,5 +1,9 @@
 package 实训作业;
 
+
+//3、写出 3+4/25*8-6 的逆波兰表达式，并描述清楚转化过程中操作数栈与运算
+//符栈的变化情况。（出题人：李俊）
+
 import java.util.ArrayList;
 import java.util.Stack;
 
