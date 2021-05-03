@@ -2,7 +2,8 @@ package 学生信息管理系统;
 
 import data.DataBase;
 import pojo.Student;
-import tools.StuInit;
+import tools.Stulint;
+import tools.Stulint;
 import tools.Tools;
 import view.CourseView;
 import view.ManagerPersonView;
@@ -11,13 +12,13 @@ import view.StudentView;
 
 /**
  * 这是程序启动的入口
- *
+ *https://blog.csdn.net/m0_46495243/article/details/115277921?utm_source=app
  */
-public class test {
+public class Main {
 
 	public static void main(String[] args) {
 		//启动初始化
-		StuInit.start();
+		Stulint.start();
 		boolean system=true;
 		while (system) {
 			System.out.println("欢迎使用学生管理系统");
@@ -176,12 +177,11 @@ public class test {
 			}
 			else{
 				//结束保存
-				StuInit.stop();
+				Stulint.stop();
 				system=false;
 			}
 		}
 	}
 
 }
-
 

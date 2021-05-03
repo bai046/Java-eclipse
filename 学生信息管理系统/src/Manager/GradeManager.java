@@ -1,4 +1,4 @@
-package Manage;
+package manager;
 
 import java.util.Map;
 import java.util.Set;

@@ -4,7 +4,7 @@ import java.util.Date;
 
 import tools.Tools;
 
-public class Person {
+public class Persion {
 	protected String username;//用户的账户和id
 	protected String password;//用户的密码
 	protected String name;//用户的姓名
@@ -13,10 +13,10 @@ public class Person {
 	protected Date createDate;//用户添加的时间
 	protected String address;//用户的地址
 	
-	public Person() {
+	public Persion() {
 		super();
 	}
-	public Person(String username, String password, String name, int sex, int age, Date createDate, String address) {
+	public Persion(String username, String password, String name, int sex, int age, Date createDate, String address) {
 		super();
 		this.username = username;
 		this.password = password;
@@ -88,7 +88,7 @@ public class Person {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Person other = (Person) obj;
+		Persion other = (Persion) obj;
 		if (username == null) {
 			if (other.username != null)
 				return false;

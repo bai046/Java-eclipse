@@ -15,11 +15,11 @@ import pojo.Course;
 import pojo.ManagerPerson;
 import pojo.Student;
 import view.CourseView;
-public class StuInit {
+public class Stulint {
 public static void start() {
 		FileReader fileReader = null;
 		BufferedReader bufferedReader = null;
-		File file = new File(StuInit.class.getProtectionDomain().getCodeSource().getLocation().getPath() + "StuManagerConfig.ini");
+		File file = new File(Stulint.class.getProtectionDomain().getCodeSource().getLocation().getPath() + "StuManagerConfig.ini");
 
 		if (file.exists()) {
 			// 配置文件存在，读取
@@ -78,7 +78,7 @@ public static void start() {
 	public static void stop() {
 		FileWriter fileWriter = null;
 		BufferedWriter bufferedWriter = null;
-		File file = new File(StuInit.class.getProtectionDomain().getCodeSource().getLocation().getPath() + "StuManagerConfig.ini");
+		File file = new File(Stulint.class.getProtectionDomain().getCodeSource().getLocation().getPath() + "StuManagerConfig.ini");
 
 		if (!file.exists()) {
 			try {
@@ -390,4 +390,5 @@ public static void start() {
 	}
 
 }
+
 

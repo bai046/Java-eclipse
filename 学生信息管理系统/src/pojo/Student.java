@@ -3,7 +3,7 @@ package pojo;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Student extends Person {
+public class Student extends Persion {
 	private Map<Course, Double> results=new HashMap<Course,Double>();//学生的成绩
 
 	public Map<Course, Double> getResults() {
