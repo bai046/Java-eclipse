@@ -8,7 +8,7 @@ import pojo.Course;
 
 /**
  * 成绩的业务
- *
+ * 
  */
 public class GradeManager {
 	/**
