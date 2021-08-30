@@ -12,7 +12,7 @@ import view.StudentView;
 
 /**
  * 这是程序启动的入口
- *https://blog.csdn.net/m0_46495243/article/details/115277921?utm_source=app
+ *参考：https://blog.csdn.net/m0_46495243/article/details/115277921?utm_source=app
  */
 public class Main {
 
