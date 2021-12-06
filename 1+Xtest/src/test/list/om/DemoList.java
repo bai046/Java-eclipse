@@ -4,11 +4,12 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.Queue;
 
+@SuppressWarnings("rawtypes")
 public class DemoList<S> implements Queue<Comparable<DemoList>> {
 	S ss;
 	
-	public <T extends Comparable> T toMap(T t, S s) {
-//		ss = new S();	//new 只能实例化已存在的类
+	public <T extends Comparable<?>> T toMap(T t, S s) {
+//		Ass = new S();	//new 只能实例化已存在的类
 		ss = s;
 		return t;
 	}
