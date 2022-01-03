@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.edu.tutor.dao.MenuDao">
+	<resultMap id="menumap" type="com.edu.tutor.entity.Menu" >
+		<id column="name" property="text" jdbcType="VARCHAR" />
+		<result column="level" property="level" jdbcType="VARCHAR" />
+	</resultMap>
+    <select id="getMenus" resultType="com.edu.tutor.entity.Menu">
+        select id, name text, level, parent, sequence, address, platform, icon iconCls from menu
+    </select>
+    <select id="queryMenuList" parameterType="com.edu.tutor.pojo.Page" resultType="com.edu.tutor.entity.Menu">
+        select id, name text, level, parent, sequence, address, platform, icon iconCls from menu
+        limit ${page.begin}, ${page.end}
+        
+    </select>
+    
+    <select id="count" resultType="java.lang.Integer">
+        select count(1) from menu
+    </select>
+</mapper>

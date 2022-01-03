@@ -1,0 +1,44 @@
+<div xmlns:tl="http://www.thymeleaf.org" style="backgroud-color:white;">
+	<div><!-- 小菜单区 -->
+	</div>
+	<div style="width:400px; display:block;"><!-- 查询区 -->
+		<form class="easyui-form" data-options="novalidate:true" method="post" action="/menu/list">
+	    	<div style="width:20%;display:inline-block;margin:auto;">菜单名称：</div>
+	    		<input type="text" style="width:20%;display:inline-block;margin:auto;"></input>
+		   	<div style="width:15%;display:inline-block;margin:auto;">平台：</div>
+			   	<select name="platform" style="width:20%;display:inline-block;margin:auto;">
+		    		<option value="front">前端</option>
+		    		<option value="behind">后端</option>
+		    	</select>
+		    <div class="buttondv" style="width:20%;display:inline-block;margin:auto;">
+		    	<input id="query" type="button" value="查询" style=""></div>
+		    </div>
+	    </form>
+	</div>
+	<table id="dg"></table>
+	<div id="pageDv" style="background:#efefef;border:1px solid #ccc;"></div>
+	<script tl:inline="javascript" >
+		$('#dg').datagrid({
+		    url:'/menu/list',
+		    columns:[ [
+				{field:'id',title:'id',width:30},
+				{field:'text',title:'text',width:100},
+				{field:'level',title:'level',width:30,align:'right'},
+				{field:'parent',title:'parent',width:30,align:'right'},
+				{field:'sequence',title:'顺序',width:30,align:'right'},
+				{field:'address',title:'地址',width:200,align:'right'},
+				{field:'platform',title:'平台',width:100,align:'right'},
+				{field:'iconCls',title:'iconCls',width:100,align:'right'}
+		    ]]
+		});
+		
+		function qq(value,name){
+	    	alert(value+":"+name)
+	    }
+		
+		$('#pageDv').pagination({
+		    total:[[${counts}]],
+		    pageSize:10
+		});
+	</script>
+</div>

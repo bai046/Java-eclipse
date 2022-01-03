@@ -1,0 +1,13 @@
+<div xmlns:th="http://www.thymeleaf.org">
+	<table id="dg"></table>
+	<script type="text/javascript" >
+		$('#dg').datagrid({
+		    url:'/menu/list',
+		    columns:[[
+				{field:'code',title:'Code',width:100},
+				{field:'name',title:'Name',width:100},
+				{field:'price',title:'Price',width:100,align:'right'}
+		    ]]
+		});
+	</script>
+</div>

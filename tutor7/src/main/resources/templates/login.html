@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!--  --><link href="css/jquery-ui.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="./easyui/themes/default/easyui.css">
+		<link rel="stylesheet" type="text/css" href="./easyui/themes/color.css">
+		<link rel="stylesheet" type="text/css" href="./easyui/themes/icon.css">
+		<link rel="stylesheet" type="text/css" href="./easyui/demo/demo.css">
+		<style>
+			.easyui-panel {
+				border:1px solid #007FFF;
+				margin:auto;
+				text-align: center;
+				background-color:#DDFDFD;
+				width:340px;
+				height:280px;
+				position: absolute;
+				top: 20px;
+				left:20px;
+				right: 20px;
+				bottom: 20px;
+				overflow:hidden;
+			}
+			.easyui-panel easyui-form div{
+				margin-bottom:20px;
+				width:100%;
+				margine:10px;
+			}
+			.easyui-panel .buttondv{
+				margin-top:20px;
+			}
+			.easyui-panel .buttondv .easyui-linkbutton{
+				width: 100%;
+			}
+			.easyui-panel div img{
+				position: absolute;
+				top: 152px;
+				right: 67px;
+				height: 25px;
+			}
+			.easyui-panel .title{
+				margine:30px;
+				padding:20px;
+			}
+			.easyui-panel .ui-button{
+				margin-top: 10px;
+				width: 210px;
+			}
+		</style>
+		<script type="text/javascript" src="./easyui/jquery.min.js"></script>
+		<script type="text/javascript" src="./easyui/jquery.easyui.min.js"></script>
+	</head>
+	<body>
+
+		<div class="easyui-panel" style="width:100%;max-width:400px;padding:30px 60px;">
+			<div class="title" style="width: 100%;"><font>欢迎使用辅导员管理系统！</font></div>
+			<form class="easyui-form" data-options="novalidate:true" method="post" enctype="multipart/form-data" action="/login">
+				<div>
+					<input class="easyui-textbox" name="name" style="width: 95%;" data-options="label:'用户名:',required:true"/>
+				</div>
+				<div>
+					<input class="easyui-textbox" name="password" style="width: 95%;" data-options="label:'密&nbsp;&nbsp;&nbsp;&nbsp;码:',required:true,validType:'password'">
+				</div>
+				<div>
+					<input class="easyui-textbox" name="verifyCode" style="width: 95%;" data-options="label:'验证码:',required:true"/>
+					<img src="img/verify.png" style="vertical-align: middle;"/>
+				</div>
+				<div class="buttondv">
+					<div id="sunmit" class="easyui-linkbutton" >登录</div>
+				</div>
+			</form>
+		</div>
+		<script src="js/external/jquery.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script type="text/javascript">
+			// $(function(){
+			// 	$(".easyui-linkbutton").hover(
+			// 		function(){
+			// 			// $(".easyui-linkbutton").addClass("c1", false);
+			// 		},
+			// 		function(){
+			// 			// $(this).toggleClass("c1", true);
+			// 		}
+			// 	);
+			$(function(){
+				$("input").hover(
+					function(){
+						// $this.alert("sb");
+						$(this).css({
+							'border': '1px solid 8fffff',
+							"background-color":"#cacaca"
+						});
+					},
+					function(){
+						$(this).css({
+							'border': '1px solid black',
+							"background-color":"#ffffff"
+						});
+					}
+				);
+				
+				$("#sunmit").click(function(){
+					console.log("submit到了这里");
+					//$("form").submit();
+					
+					document.getElementsByTagName("form")[0].submit();
+				});
+			});
+			
+		</script>
+	</body>
+</html>
